@@ -4,7 +4,7 @@ from transitions.extensions import GraphMachine
 from RogueAIStateMachine import RogueAIStateMachine
 
 # Load the conversation script from a JSON file
-with open("conversation.json", "r") as file:
+with open("conversation-dutch.json", "r") as file:
     conversation_script = json.load(file)
 
 # Create an instance of the rogue AI state machine with the conversation script

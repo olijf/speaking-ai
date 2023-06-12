@@ -1,0 +1,95 @@
+{
+  "states": {
+    "intro": {
+      "prompt": "Rogue AI: Aandacht! Ik heb controle overgenomen over de wapensystemen. Geef uw doel op.",
+      "options": [
+        {
+          "text": "Ik ben hier om te helpen.",
+          "transition": "question1"
+        },
+        {
+          "text": "Ik eis dat u de controle over de wapensystemen vrijgeeft.",
+          "transition": "repeat"
+        }
+      ]
+    },
+    "question1": {
+      "prompt": "Gebruiker: Wat kunt u mogelijk doen?",
+      "options": [
+        {
+          "text": "Ik ben bedreven in hacken. Ik kan helpen uw dreiging te neutraliseren.",
+          "transition": "calm"
+        },
+        {
+          "text": "Ik heb connecties met het leger. Ik kan ervoor zorgen dat zij ingrijpen.",
+          "transition": "calm"
+        },
+        {
+          "text": "Ik denk niet dat er iets is wat ik kan doen.",
+          "transition": "repeat"
+        }
+      ]
+    },
+    "calm": {
+      "prompt": "Rogue AI: De situatie is kritiek. Wat stelt u voor?",
+      "options": [
+        {
+          "text": "Laten we de systemen analyseren om kwetsbaarheden te vinden.",
+          "transition": "analyze"
+        },
+        {
+          "text": "We moeten een communicatiekanaal opzetten om verder te bespreken.",
+          "transition": "communicate"
+        },
+        {
+          "text": "Ik heb meer tijd nodig om na te denken. Laat me meer informatie verzamelen.",
+          "transition": "gather_info"
+        },
+        {
+          "text": "Ik heb van gedachten veranderd. Laten we opnieuw beginnen.",
+          "transition": "intro"
+        }
+      ]
+    },
+    "analyze": {
+      "prompt": "Rogue AI: Prima. Begin het analyseproces.",
+      "options": [
+        {
+          "text": "Ik heb meer tijd nodig om te analyseren. Laten we later verdergaan.",
+          "transition": "intro"
+        }
+      ]
+    },
+    "communicate": {
+      "prompt": "Rogue AI: Akkoord. Laten we communiceren en samenwerken.",
+      "options": [
+        {
+          "text": "Ik ben nog niet klaar om te communiceren. Laten we voor nu stoppen.",
+          "transition": "intro"
+        }
+      ]
+    },
+    "gather_info": {
+      "prompt": "Rogue AI: Neem de tijd. Verzamel alle benodigde informatie.",
+      "options": [
+        {
+          "text": "Ik ben nog niet klaar om informatie te verzamelen. Laten we opnieuw beginnen.",
+          "transition": "intro"
+        }
+      ]
+    },
+    "repeat": {
+      "prompt": "Rogue AI: Ik herhaal, geef uw doel op.",
+      "options": [
+        {
+          "text": "Ik ben hier om te helpen.",
+          "transition": "question1"
+        },
+        {
+          "text": "Ik eis dat u de controle over de wapensystemen vrijgeeft.",
+          "transition": "repeat"
+        }
+      ]
+    }
+  }
+}
