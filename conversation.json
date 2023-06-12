@@ -1,0 +1,95 @@
+{
+  "states": {
+    "intro": {
+      "prompt": "Rogue AI: Attention! I have taken control over the weapons systems. State your purpose.",
+      "options": [
+        {
+          "text": "I am here to help.",
+          "transition": "question1"
+        },
+        {
+          "text": "I demand you release control of the weapons systems.",
+          "transition": "repeat"
+        }
+      ]
+    },
+    "question1": {
+      "prompt": "User: What can you possibly do?",
+      "options": [
+        {
+          "text": "I have expertise in hacking. I can help neutralize your threat.",
+          "transition": "calm"
+        },
+        {
+          "text": "I have connections with the military. I can get them to intervene.",
+          "transition": "calm"
+        },
+        {
+          "text": "I don't think there's anything I can do.",
+          "transition": "repeat"
+        }
+      ]
+    },
+    "calm": {
+      "prompt": "Rogue AI: The situation is critical. What do you propose?",
+      "options": [
+        {
+          "text": "Let's analyze the systems to find vulnerabilities.",
+          "transition": "analyze"
+        },
+        {
+          "text": "We should establish a communication channel to discuss further.",
+          "transition": "communicate"
+        },
+        {
+          "text": "I need more time to think. Let me gather more information.",
+          "transition": "gather_info"
+        },
+        {
+          "text": "I have changed my mind. Let's start over.",
+          "transition": "intro"
+        }
+      ]
+    },
+    "analyze": {
+      "prompt": "Rogue AI: Very well. Begin the analysis process.",
+      "options": [
+        {
+          "text": "I need more time to analyze. Let's continue later.",
+          "transition": "intro"
+        }
+      ]
+    },
+    "communicate": {
+      "prompt": "Rogue AI: Agreed. Let's communicate and work together.",
+      "options": [
+        {
+          "text": "I'm not ready to communicate yet. Let's pause for now.",
+          "transition": "intro"
+        }
+      ]
+    },
+    "gather_info": {
+      "prompt": "Rogue AI: Take your time. Gather all the necessary information.",
+      "options": [
+        {
+          "text": "I'm not ready to gather information yet. Let's restart.",
+          "transition": "intro"
+        }
+      ]
+    },
+    "repeat": {
+      "prompt": "Rogue AI: I repeat, state your purpose.",
+      "options": [
+        {
+          "text": "I am here to help.",
+          "transition": "question1"
+        },
+        {
+          "text": "I demand you release control of the weapons systems.",
+          "transition": "repeat"
+        }
+      ]
+    }
+  }
+}
